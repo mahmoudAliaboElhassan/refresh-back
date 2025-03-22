@@ -5,7 +5,7 @@ const express = require("express");
 const app = express();
 
 const cookieParser = require("cookie-parser");
-const morgan = require("morgan");
+// const morgan = require("morgan");
 const mongoose = require("mongoose");
 const url = process.env.MONGO_URL;
 
@@ -32,7 +32,7 @@ const teacherRouter = require("./routes/teacher.route");
 app.use(express.json());
 app.use(cookieParser());
 
-app.use(morgan("dev"));
+// app.use(morgan("dev"));
 
 app.use("/api/teachers", teacherRouter);
 
